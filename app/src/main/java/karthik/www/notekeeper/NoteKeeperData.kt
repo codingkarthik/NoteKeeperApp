@@ -1,10 +1,10 @@
 package karthik.www.notekeeper
 
-class CourseInfo (val courseId: String, val title: String) {
+data class CourseInfo (val courseId: String, val title: String) {
     override fun toString(): String {
-        return courseId
+        return title
     }
 }
 
-class NoteInfo (var course: CourseInfo, var title: String, var text: String)
+data class NoteInfo (var course: CourseInfo, var title: String, var text: String)
 

@@ -1,11 +1,34 @@
 package karthik.www.notekeeper
 
-class DataManager {
+object DataManager {
     val courses = HashMap<String, CourseInfo>()
     val notes = ArrayList<NoteInfo>()
 
     init {
         initializeCourses()
+        initializeNotes()
+    }
+
+    private fun initializeNotes() {
+        var course = courses["android_intents"]!!
+        var note = NoteInfo(course, "Dynamic Intent Resolution", "Wow, intents allow components to be resolved at runtime")
+        notes.add(note)
+
+        course = courses["android_async"]!!
+        note = NoteInfo(course, "Delegating Intents", "Wow, intents allow components to be resolved at runtime")
+        notes.add(note)
+
+        course = courses["java_lang"]!!
+        note = NoteInfo(course, "Delegating Intents 2", "Wow, intents allow components to be resolved at runtime")
+        notes.add(note)
+
+        course = courses["java_core"]!!
+        note = NoteInfo(course, "Delegating Intents 3", "Wow, intents allow components to be resolved at runtime")
+        notes.add(note)
+
+        course = courses["android_async"]!!
+        note = NoteInfo(course, "Delegating Intents 4", "Wow, intents allow components to be resolved at runtime")
+        notes.add(note)
     }
 
     private fun initializeCourses() {
